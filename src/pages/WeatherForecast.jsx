@@ -28,6 +28,7 @@ export default function WeatherForecast(props) {
         latitude,
         longitude,
         current_weather: true,
+        // http://api.geonames.org/timezoneJSON?lat=22.53&lng=113.94&username=tigercheng
         timezone: 'Asia/Shanghai',
       });
       const weatherData = await response.json();
