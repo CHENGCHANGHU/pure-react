@@ -5,8 +5,30 @@
 
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import { Provider } from 'react-redux'
+import { ToolkitStore } from 'store/ToolkitStore';
 
-import { WeatherForecast } from './pages';
+import {
+  WeatherForecast,
+  ToolkitRoot,
+  ZustandRoot,
+} from './pages';
 
 createRoot(document.getElementById('root')).render((<WeatherForecast />));
+
+createRoot(document.getElementById('toolkit-root')).render((
+  <Provider store={ ToolkitStore }>
+    toolkit-root
+    <ToolkitRoot />
+  </Provider>
+));
+
+createRoot(document.getElementById('zustand-root')).render((
+  <>
+    zustand-root
+    <ZustandRoot />
+  </>
+));
+
+
 

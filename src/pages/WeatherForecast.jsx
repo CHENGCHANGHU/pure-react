@@ -90,14 +90,18 @@ export default function WeatherForecast(props) {
   return (
     <>
       {
+        loadingFlag && (
+          <div>Loading!</div>
+        )
+      }
+      {
         !loadingFlag && (
           <>
-            <div>weather forecast: Latitude(纬度): {latitude} Longitude(经度): {longitude}</div>
-            <div>{ temperature }°C</div>
+            <div>Latitude(纬度): { latitude } Longitude(经度): { longitude }</div>
+            <div>weather forecast: { temperature }°C</div>
           </>
         )
       }
     </>
-    
   );
 };
