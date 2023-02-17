@@ -12,7 +12,8 @@ import {
   WeatherForecast,
   ToolkitRoot,
   ZustandRoot,
-} from './pages';
+  TestUseAsyncState,
+} from 'src/pages';
 
 createRoot(document.getElementById('root')).render((<WeatherForecast />));
 
@@ -27,6 +28,13 @@ createRoot(document.getElementById('zustand-root')).render((
   <>
     zustand-root
     <ZustandRoot />
+  </>
+));
+
+createRoot(document.getElementById('use-async-state')).render((
+  <>
+    Test useAsyncState
+    <TestUseAsyncState />
   </>
 ));
 

@@ -34,7 +34,9 @@
   "author": "",
   "license": "Apache-2.0",
   "dependencies": {
+    "@babel/core": "^7.20.12",
     "@reduxjs/toolkit": "^1.8.6",
+    "@types/react": "^18.0.28",
     "react-redux": "^8.0.4",
     "recoil": "^0.7.6",
     "zustand": "^4.1.2"

@@ -28,6 +28,18 @@ function getWebpackBaseConfig (productionFlag = false) {
           exclude: path.resolve(__dirname, '..', 'node_modules'),
         },
         {
+          test: /\.tsx?$/,
+          use: [
+            { loader: 'babel-loader', },
+            {
+              loader: 'ts-loader',
+              options: {
+                transpileOnly: true,
+              },
+            },
+          ],
+        },
+        {
           test: /\.css$/,
           use: [
             productionFlag ? MiniCssExtractPlugin.loader : 'style-loader',
